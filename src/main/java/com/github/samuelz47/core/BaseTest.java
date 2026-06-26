@@ -1,4 +1,4 @@
-package com.github.samuelz47.rest;
+package com.github.samuelz47.core;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -7,12 +7,11 @@ import org.junit.jupiter.api.BeforeAll;
 
 import static org.hamcrest.Matchers.lessThan;
 
-public class BaseTest implements env{
+public class BaseTest implements env {
 
     @BeforeAll
     public static void setup() {
         RestAssured.baseURI = APP_BASE_URL;
-        RestAssured.port = APP_PORT;
         RestAssured.basePath = APP_BASE_PATH;
 
         RequestSpecBuilder reqBuilder = new RequestSpecBuilder();
